@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil visual de Cristiano Ronaldo: trayectoria, récords y momentos de una carrera extraordinaria.">
+  <title>CR7 | El estándar de una era</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="CR7, volver al inicio">
+      <span class="brand-mark">CR<span>7</span></span>
+      <span class="brand-label">The standard<br>of an era</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú de navegación">
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#numeros">Números</a>
+      <a href="#galeria">Galería</a>
+      <a href="observabilidad.html">Observabilidad</a>
+    </nav>
+    <a class="header-cta" href="#galeria">Ver momentos <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Perfil de una leyenda</p>
+        <h1 id="hero-title">Cristiano<br><em>Ronaldo</em></h1>
+        <p class="hero-intro">Una carrera construida con velocidad, precisión y una voluntad que convirtió cada partido en una declaración.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#trayectoria">Explorar la carrera <span aria-hidden="true">↓</span></a>
+          <span class="hero-note">Madeira · Portugal<br><strong>1985 — presente</strong></span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg" alt="Cristiano Ronaldo durante un partido en 2018">
+          <span class="image-tag">01 / 03</span>
+        </div>
+        <div class="hero-stamp">GOAT<br><span>mindset</span></div>
+        <p class="vertical-label">FOOTBALL / CULTURE / LEGACY</p>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span></span> Desplázate para descubrir</div>
+    </section>
+
+    <section class="manifesto" aria-label="Cita destacada">
+      <div class="section-kicker">01 <span></span> La mentalidad</div>
+      <blockquote>“El talento sin trabajo no es nada.”</blockquote>
+      <p>— Cristiano Ronaldo</p>
+    </section>
+
+    <section class="journey section-shell" id="trayectoria" aria-labelledby="journey-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> Una línea de tiempo</p>
+          <h2 id="journey-title">De Madeira<br>a <em>la cima.</em></h2>
+        </div>
+        <p class="section-description">Del niño que soñaba en Funchal al delantero que redefinió el significado de consistencia. Cada etapa añadió una nueva capa a su legado.</p>
+      </div>
+      <div class="timeline" role="tablist" aria-label="Etapas de la carrera">
+        <button class="timeline-item active" id="tab-2003" type="button" role="tab" aria-selected="true" aria-controls="milestone-panel" tabindex="0" data-year="2003">
+          <span class="timeline-year">2003</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-club">Manchester<br>United</span>
+        </button>
+        <button class="timeline-item" id="tab-2009" type="button" role="tab" aria-selected="false" aria-controls="milestone-panel" tabindex="-1" data-year="2009">
+          <span class="timeline-year">2009</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-club">Real<br>Madrid</span>
+        </button>
+        <button class="timeline-item" id="tab-2018" type="button" role="tab" aria-selected="false" aria-controls="milestone-panel" tabindex="-1" data-year="2018">
+          <span class="timeline-year">2018</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-club">Juventus<br>FC</span>
+        </button>
+        <button class="timeline-item" id="tab-2023" type="button" role="tab" aria-selected="false" aria-controls="milestone-panel" tabindex="-1" data-year="2023">
+          <span class="timeline-year">2023</span>
+          <span class="timeline-dot"></span>
+          <span class="timeline-club">Al-Nassr<br>FC</span>
+        </button>
+      </div>
+      <div class="journey-detail" id="milestone-panel" role="tabpanel" aria-labelledby="tab-2003" tabindex="0" aria-live="polite">
+        <span class="detail-number">01</span>
+        <div>
+          <p class="detail-label">El comienzo</p>
+          <h3 id="milestone-title">La promesa de Old Trafford</h3>
+          <p id="milestone-copy">Con 18 años, llegó a Manchester y transformó su potencial en una disciplina feroz. El número 7 dejó de ser una camiseta: se convirtió en una responsabilidad.</p>
+        </div>
+        <span class="detail-arrow" aria-hidden="true">↗</span>
+      </div>
+    </section>
+
+    <section class="numbers" id="numeros" aria-labelledby="numbers-title">
+      <div class="section-shell">
+        <div class="section-kicker light">02 <span></span> El impacto en cifras</div>
+        <div class="numbers-heading">
+          <h2 id="numbers-title">Más que<br><em>estadísticas.</em></h2>
+          <p>Los números cuentan una parte de la historia. La otra está en la capacidad de aparecer, una y otra vez, cuando el momento pesa más.</p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card"><strong>5</strong><span>Balones<br>de Oro</span><small>2008 · 2013 · 2014<br>2016 · 2017</small></article>
+          <article class="stat-card"><strong>900<sup>+</sup></strong><span>Goles<br>oficiales</span><small>Una cifra en<br>movimiento</small></article>
+          <article class="stat-card"><strong>5</strong><span>Champions<br>League</span><small>La competición<br>de su vida</small></article>
+          <article class="stat-card"><strong>1</strong><span>Identidad<br>global</span><small>CR7 · una marca<br>personal única</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section-shell" id="galeria" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> Archivo visual</p>
+          <h2 id="gallery-title">Momentos que<br><em>permanecen.</em></h2>
+        </div>
+        <p>Una mirada a tres capítulos de una historia que todavía se está escribiendo.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-card gallery-card-large">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/1_cristiano_ronaldo_2016.jpg/1280px-1_cristiano_ronaldo_2016.jpg" alt="Cristiano Ronaldo en 2016" loading="lazy">
+          <figcaption><span>01</span><strong>La celebración</strong><small>2016 · Portugal</small></figcaption>
+        </figure>
+        <figure class="gallery-card gallery-card-small">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Cristiano_Ronaldo_-_Ballon_d%27Or_%28cropped%29.jpg/1280px-Cristiano_Ronaldo_-_Ballon_d%27Or_%28cropped%29.jpg" alt="Cristiano Ronaldo con el Balón de Oro" loading="lazy">
+          <figcaption><span>02</span><strong>El reconocimiento</strong><small>El premio individual</small></figcaption>
+        </figure>
+        <figure class="gallery-card gallery-card-wide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Cristiano_Ronaldo_Al-Nassr_2023.jpg" alt="Cristiano Ronaldo con Al-Nassr en 2023" loading="lazy">
+          <figcaption><span>03</span><strong>El siguiente capítulo</strong><small>2023 · Al-Nassr</small></figcaption>
+        </figure>
+      </div>
+      <p class="credits">Fotografías: Wikimedia Commons · Contenido informativo y no oficial</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="brand-mark">CR<span>7</span></span>
+    <p>Una carrera. Una mentalidad.<br><strong>Un estándar.</strong></p>
+    <a href="#inicio" class="back-top">Volver arriba ↑</a>
+  </footer>
+</body>
+</html>

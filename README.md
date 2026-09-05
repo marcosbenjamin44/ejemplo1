@@ -8,6 +8,7 @@ Este repositorio contiene la **versión 2** de un ejercicio completo de desarrol
 - **Página publicada de Messi:** [Abrir página Messi](https://marcosbenjamin44.github.io/ejemplo1/messi.html)
 - **Dashboard de observabilidad:** [Abrir dashboard](https://marcosbenjamin44.github.io/ejemplo1/observabilidad.html)
 - **Repositorio:** [github.com/marcosbenjamin44/ejemplo1](https://github.com/marcosbenjamin44/ejemplo1)
+- **Guía completa para estudiantes:** [Abrir READMEGUIA.md](READMEGUIA.md)
 
 ## 1. Requisitos
 

@@ -54,7 +54,7 @@ button { color: inherit; font: inherit; }
 .eyebrow-line { background: var(--sky-dark); display: inline-block; height: 2px; width: 32px; }
 .hero .eyebrow-line { background: var(--gold); }
 h1, h2 { font-family: var(--display); letter-spacing: -.065em; line-height: .88; margin: 28px 0; overflow-wrap: anywhere; text-transform: uppercase; }
-h1 { color: #fff; font-size: clamp(4.5rem, 9.2vw, 9.5rem); text-wrap: balance; }
+h1 { color: #e91919; font-size: clamp(4.5rem, 9.2vw, 9.5rem); text-wrap: balance; }
 h1 em, h1 .accent { color: var(--sky); font-style: normal; }
 h2 em, h2 .accent { color: var(--sky-dark); font-style: normal; }
 .hero-intro { color: rgba(255,255,255,.72); font-size: 16px; line-height: 1.6; max-width: 355px; }

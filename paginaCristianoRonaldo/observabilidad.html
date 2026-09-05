@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel de observabilidad del sitio CR7: estado, rendimiento, errores e interacciones registrados en el navegador.">
+  <title>CR7 | Panel de observabilidad</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="observabilidad.css">
+  <script src="script.js" defer></script>
+  <script src="observabilidad.js" defer></script>
+</head>
+<body class="obs-body">
+  <a class="skip-link" href="#obs-main">Saltar al contenido principal</a>
+
+  <header class="obs-header">
+    <a class="brand" href="index.html" aria-label="CR7, volver al sitio principal">
+      <span class="brand-mark">CR<span>7</span></span>
+      <span class="brand-label">The standard<br>of an era</span>
+    </a>
+    <a class="obs-back" href="index.html">← Volver al sitio</a>
+  </header>
+
+  <main id="obs-main" class="obs-main">
+    <div class="obs-intro">
+      <p class="eyebrow"><span class="eyebrow-line"></span> Observabilidad del cliente</p>
+      <h1>Panel de<br><em>observabilidad.</em></h1>
+      <p class="obs-description">Datos capturados en este navegador mientras se usa el sitio: estado, rendimiento, errores e interacciones. Nada se envía a un servidor; todo vive en <code>localStorage</code>.</p>
+    </div>
+
+    <div class="obs-toolbar" role="group" aria-label="Acciones del panel">
+      <button type="button" class="obs-action" id="obs-refresh">Actualizar datos</button>
+      <button type="button" class="obs-action" id="obs-demo">Generar evento de demostración</button>
+      <button type="button" class="obs-action" id="obs-download">Descargar snapshot JSON</button>
+      <button type="button" class="obs-action obs-action-danger" id="obs-clear">Limpiar almacenamiento local</button>
+    </div>
+    <p class="obs-status" id="obs-status-message" role="status" aria-live="polite"></p>
+
+    <div class="obs-grid">
+      <section class="obs-card" aria-labelledby="obs-h-status">
+        <h2 id="obs-h-status">Estado</h2>
+        <dl class="obs-deflist" id="obs-status"></dl>
+      </section>
+
+      <section class="obs-card" aria-labelledby="obs-h-load">
+        <h2 id="obs-h-load">Tiempo de carga</h2>
+        <div id="obs-load"></div>
+      </section>
+
+      <section class="obs-card" aria-labelledby="obs-h-errors">
+        <h2 id="obs-h-errors">Errores JS y promesas rechazadas</h2>
+        <div id="obs-errors"></div>
+      </section>
+
+      <section class="obs-card" aria-labelledby="obs-h-resource-errors">
+        <h2 id="obs-h-resource-errors">Errores de recursos</h2>
+        <div id="obs-resource-errors"></div>
+      </section>
+
+      <section class="obs-card" aria-labelledby="obs-h-interactions">
+        <h2 id="obs-h-interactions">Interacciones</h2>
+        <div id="obs-interactions"></div>
+      </section>
+
+      <section class="obs-card" aria-labelledby="obs-h-visibility">
+        <h2 id="obs-h-visibility">Visibilidad de la pestaña</h2>
+        <div id="obs-visibility"></div>
+      </section>
+
+      <section class="obs-card" aria-labelledby="obs-h-viewport">
+        <h2 id="obs-h-viewport">Viewport</h2>
+        <dl class="obs-deflist" id="obs-viewport"></dl>
+      </section>
+
+      <section class="obs-card" aria-labelledby="obs-h-connection">
+        <h2 id="obs-h-connection">Conexión</h2>
+        <dl class="obs-deflist" id="obs-connection"></dl>
+      </section>
+
+      <section class="obs-card obs-card-wide" aria-labelledby="obs-h-api">
+        <h2 id="obs-h-api">Soporte de APIs</h2>
+        <ul class="obs-api-list" id="obs-api-support"></ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -196,3 +196,27 @@ La página presenta una buena base visual y semántica, pero antes de considerar
 
 **Estado de auditoría:** completada por OpenCode.  
 **Estado de correcciones:** pendientes de priorización e implementación.
+
+## Addendum: auditoría de la versión 2
+
+OpenCode revisó la incorporación de la página de Lionel Messi antes de su publicación. La revisión incluyó `messi.html`, `messi.css`, `messi.js`, la integración con `index.html` y `observabilidad.html`, además de las páginas existentes.
+
+### Hallazgos detectados y corregidos
+
+- Se sustituyó el dorado de bajo contraste en textos pequeños sobre fondos claros por `--gold-dark: #8a5b00` y se usó `--sky-dark: #16467a` para el foco y el punto activo de la línea de tiempo.
+- Se mejoró el contraste de la navegación y la marca de Messi sobre el hero oscuro.
+- Se ampliaron las áreas táctiles de los enlaces del footer.
+- Se eliminó el `aria-live` redundante del `tabpanel` de Messi.
+- Se reemplazó el uso decorativo de `<em>` por `span.accent`.
+- Se protegió la cita destacada contra desbordamiento horizontal en móviles.
+
+### Validación posterior
+
+- Contraste `--gold-dark` sobre fondo claro: **5.42:1**.
+- Contraste `--sky-dark` sobre fondo claro: **8.85:1**.
+- Viewport móvil probado: `scrollWidth` igual a `clientWidth`, sin overflow horizontal.
+- Navegación por teclado de la línea de tiempo: aprobada.
+- Diagnósticos de HTML, CSS y JavaScript: sin errores.
+- `node --check messi.js` y `node --check script.js`: aprobados.
+
+**Estado de auditoría v2:** completada por OpenCode y corregida antes de publicar.

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil visual de Lionel Messi: trayectoria, récords y momentos de una carrera irrepetible.">
+  <title>Messi | La magia del 10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="messi.css">
+  <script src="script.js" defer></script>
+  <script src="messi.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Messi, volver al inicio">
+      <span class="brand-mark">M<span>10</span></span>
+      <span class="brand-label">La magia<br>del diez</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú de navegación">
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#numeros">Números</a>
+      <a href="#galeria">Galería</a>
+      <a href="index.html">← Página CR7</a>
+      <a href="observabilidad.html">Observabilidad</a>
+    </nav>
+    <a class="header-cta" href="#galeria">Ver momentos <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Lionel_Messi_WC2022.jpg" alt="Lionel Messi conduciendo el balón durante un partido de la Copa Mundial de la FIFA 2022">
+          <span class="image-tag">01 / 03</span>
+        </div>
+        <div class="hero-stamp">10<br><span>eterno</span></div>
+        <p class="vertical-label">FÚTBOL / MAGIA / LEGADO</p>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Perfil de una leyenda</p>
+        <h1 id="hero-title">Lionel<br><span class="accent">Messi</span></h1>
+        <p class="hero-intro">Una carrera construida con equilibrio, visión y una zurda que convirtió la sencillez en la forma más alta del arte.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#trayectoria">Explorar la carrera <span aria-hidden="true">↓</span></a>
+          <span class="hero-note">Rosario · Argentina<br><strong>1987 — presente</strong></span>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span></span> Desplázate para descubrir</div>
+    </section>
+
+    <section class="manifesto" aria-label="Cita destacada">
+      <div class="section-kicker">01 <span></span> La filosofía</div>
+      <blockquote>“El éxito no es un accidente: es trabajo duro, perseverancia y amor por lo que haces.”</blockquote>
+      <p>— Lionel Messi</p>
+    </section>
+
+    <section class="journey section-shell" id="trayectoria" aria-labelledby="journey-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> Una línea de tiempo</p>
+          <h2 id="journey-title">De La Masia<br>al <span class="accent">Mundial.</span></h2>
+        </div>
+        <p class="section-description">Del niño que llegó a Barcelona a los 13 años al capitán que cumplió el sueño de un país entero. Cada etapa sumó una nueva razón para llamarlo el mejor.</p>
+      </div>
+      <p class="messi-timeline-hint">Usa las flechas del teclado, Inicio o Fin para moverte entre etapas.</p>
+      <div class="messi-timeline" role="tablist" aria-label="Etapas de la carrera">
+        <button class="messi-timeline-item active" id="tab-messi-2004" type="button" role="tab" aria-selected="true" aria-controls="messi-milestone-panel" tabindex="0" data-year="2004">
+          <span class="messi-timeline-year">2004</span>
+          <span class="messi-timeline-dot"></span>
+          <span class="messi-timeline-club">FC<br>Barcelona</span>
+        </button>
+        <button class="messi-timeline-item" id="tab-messi-2021" type="button" role="tab" aria-selected="false" aria-controls="messi-milestone-panel" tabindex="-1" data-year="2021">
+          <span class="messi-timeline-year">2021</span>
+          <span class="messi-timeline-dot"></span>
+          <span class="messi-timeline-club">Copa<br>América</span>
+        </button>
+        <button class="messi-timeline-item" id="tab-messi-2022" type="button" role="tab" aria-selected="false" aria-controls="messi-milestone-panel" tabindex="-1" data-year="2022">
+          <span class="messi-timeline-year">2022</span>
+          <span class="messi-timeline-dot"></span>
+          <span class="messi-timeline-club">Campeón<br>del Mundo</span>
+        </button>
+        <button class="messi-timeline-item" id="tab-messi-2023" type="button" role="tab" aria-selected="false" aria-controls="messi-milestone-panel" tabindex="-1" data-year="2023">
+          <span class="messi-timeline-year">2023</span>
+          <span class="messi-timeline-dot"></span>
+          <span class="messi-timeline-club">Inter<br>Miami</span>
+        </button>
+      </div>
+      <div class="messi-journey-detail" id="messi-milestone-panel" role="tabpanel" aria-labelledby="tab-messi-2004" tabindex="0">
+        <span class="messi-detail-number">01</span>
+        <div>
+          <p class="messi-detail-label">El comienzo</p>
+          <h3 id="messi-milestone-title">El niño de La Masia</h3>
+          <p id="messi-milestone-copy">Con 13 años llegó desde Rosario para tratar un problema de crecimiento y quedarse para siempre. En Barcelona encontró un club, un estilo de juego y una casa.</p>
+        </div>
+        <span class="messi-detail-arrow" aria-hidden="true">↗</span>
+      </div>
+    </section>
+
+    <section class="numbers" id="numeros" aria-labelledby="numbers-title">
+      <div class="section-shell">
+        <div class="section-kicker light">02 <span></span> El impacto en cifras</div>
+        <div class="numbers-heading">
+          <h2 id="numbers-title">Más que<br><span class="accent">estadísticas.</span></h2>
+          <p>Los números explican parte de la historia. La otra parte está en la manera en que hace fácil lo difícil, partido tras partido.</p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card"><strong>8</strong><span>Balones<br>de Oro</span><small>Récord histórico<br>en la categoría</small></article>
+          <article class="stat-card"><strong>1</strong><span>Copa<br>Mundial</span><small>Qatar 2022<br>con Argentina</small></article>
+          <article class="stat-card"><strong>4</strong><span>Champions<br>League</span><small>Con el FC<br>Barcelona</small></article>
+          <article class="stat-card"><strong>850<sup>+</sup></strong><span>Goles<br>oficiales</span><small>Una cifra en<br>movimiento</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section-shell" id="galeria" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> Archivo visual</p>
+          <h2 id="gallery-title">Momentos que<br><span class="accent">permanecen.</span></h2>
+        </div>
+        <p>Dos capítulos de una historia que ya es parte del folclore del fútbol.</p>
+      </div>
+      <div class="messi-gallery-grid">
+        <figure class="messi-gallery-card messi-gallery-card-large">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg" alt="Lionel Messi celebrando con la selección de Argentina el título de la Copa Mundial de la FIFA Qatar 2022" loading="lazy">
+          <figcaption><span>01</span><strong>La gloria mundial</strong><small>2022 · Qatar</small></figcaption>
+        </figure>
+        <figure class="messi-gallery-card messi-gallery-card-wide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Lionel_Messi_2018.jpg" alt="Lionel Messi disputando un balón con la camiseta del FC Barcelona en 2018" loading="lazy">
+          <figcaption><span>02</span><strong>El genio azulgrana</strong><small>2018 · FC Barcelona</small></figcaption>
+        </figure>
+      </div>
+      <p class="credits">Fotografías: Wikimedia Commons · Contenido informativo y no oficial</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="brand-mark">M<span>10</span></span>
+    <p>Una carrera. Una magia.<br><strong>Un legado.</strong></p>
+    <div class="messi-footer-links">
+      <a href="index.html">Volver a CR7</a>
+      <a href="observabilidad.html">Ir al dashboard</a>
+      <a href="#inicio" class="back-top">Volver arriba ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

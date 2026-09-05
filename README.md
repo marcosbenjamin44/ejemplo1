@@ -56,7 +56,50 @@ ejemplo1/
     └── resultados-pruebas-observabilidad.xlsx
 ```
 
-## 4. Ejecutar la página localmente
+## 4. Arquitectura del ejercicio
+
+La solución es una aplicación estática sin backend. El navegador carga los archivos HTML, CSS y JavaScript; `script.js` registra telemetría local y `observabilidad.js` la presenta en el dashboard. GitHub Pages sirve los archivos publicados desde la rama `gh-pages`.
+
+```mermaid
+flowchart TD
+    estudiante[Estudiante] --> vscode[Visual Studio Code]
+    vscode --> claude[Claude Code\nDesarrollo y pruebas]
+    vscode --> opencode[OpenCode\nAuditoría WCAG, UX y responsive]
+
+    claude --> local[Proyecto local\n/ejemplo1/paginaCristianoRonaldo]
+    opencode --> auditoria[AUDITORIA.md]
+    local --> principal[index.html\nstyles.css\nscript.js]
+    local --> dashboard[observabilidad.html\nobservabilidad.css\nobservabilidad.js]
+    principal --> browser[Navegador]
+    dashboard --> browser
+    browser --> telemetry[CR7Observability\nPerformance API + errores + clicks]
+    telemetry --> storage[(localStorage\ncr7-observability)]
+    storage --> dashboard
+    local --> pruebas[resultados-pruebas-observabilidad.xlsx]
+
+    local --> git[Git\ncommit en main]
+    git --> github[GitHub\nmarcosbenjamin44/ejemplo1]
+    github --> pages[GitHub Pages\nrama gh-pages]
+    pages --> public[URL pública]
+```
+
+### Componentes
+
+| Componente | Responsabilidad |
+|---|---|
+| `index.html` | Página principal sobre Cristiano Ronaldo. |
+| `styles.css` | Diseño visual, responsive, contraste y estados de foco. |
+| `script.js` | Interacción de la línea de tiempo y observabilidad del sitio. |
+| `observabilidad.html` | Dashboard para consultar las métricas del navegador. |
+| `observabilidad.css` | Estilos del dashboard. |
+| `observabilidad.js` | Lectura del snapshot, actualización, limpieza y exportación JSON. |
+| `AUDITORIA.md` | Informe de OpenCode sobre WCAG, UX y adaptabilidad. |
+| `resultados-pruebas-observabilidad.xlsx` | Evidencias y resultados de las pruebas. |
+| `main` | Rama con el código fuente, documentación y resultados. |
+| `gh-pages` | Rama preparada para servir el sitio publicado. |
+| GitHub Pages | Servicio que entrega la web estática en internet. |
+
+## 5. Ejecutar la página localmente
 
 Desde la carpeta del proyecto:
 
@@ -74,7 +117,7 @@ Para detener el servidor, pulsa `Ctrl + C` en la terminal.
 
 > También puedes utilizar la extensión **Live Server** de Visual Studio Code. Instálala desde la vista de extensiones, abre `paginaCristianoRonaldo/index.html` y pulsa **Go Live**.
 
-## 5. Trabajar con dos agentes
+## 6. Trabajar con dos agentes
 
 El flujo utilizado en este ejercicio es:
 
@@ -110,7 +153,7 @@ claude --version
 opencode --version
 ```
 
-## 6. Desarrollo con Claude Code
+## 7. Desarrollo con Claude Code
 
 Desde la raíz del sitio:
 
@@ -127,7 +170,7 @@ Lee AUDITORIA.md y aplica las recomendaciones pendientes de accesibilidad y resp
 
 Antes de aceptar cambios, revisa los archivos modificados y prueba la página en el navegador.
 
-## 7. Auditoría con OpenCode
+## 8. Auditoría con OpenCode
 
 Desde la carpeta del sitio:
 
@@ -144,7 +187,7 @@ Audita index.html, styles.css y script.js según WCAG 2.2 AA, UX y adaptabilidad
 
 El resultado actual está en [paginaCristianoRonaldo/AUDITORIA.md](paginaCristianoRonaldo/AUDITORIA.md).
 
-## 8. Observabilidad
+## 9. Observabilidad
 
 El sitio registra datos únicamente en el navegador y no los envía a un servidor. La instrumentación se encuentra en `script.js` y expone:
 
@@ -164,7 +207,7 @@ Se registran, entre otros:
 
 En el dashboard puedes actualizar datos, generar un evento de demostración, limpiar el almacenamiento y descargar un snapshot JSON.
 
-## 9. Ejecutar pruebas técnicas
+## 10. Ejecutar pruebas técnicas
 
 Valida la sintaxis de los archivos JavaScript:
 
@@ -182,7 +225,7 @@ Los resultados documentados están en [resultados-pruebas-observabilidad.xlsx](p
 - `Casos de prueba`
 - `Observabilidad`
 
-## 10. Guardar cambios en Git
+## 11. Guardar cambios en Git
 
 Desde la raíz del repositorio:
 
@@ -193,7 +236,7 @@ git commit -m "docs: add project setup and deployment guide"
 git push origin main
 ```
 
-## 11. Publicar en GitHub Pages
+## 12. Publicar en GitHub Pages
 
 El sitio se publica desde la rama `gh-pages`, que contiene el contenido de `paginaCristianoRonaldo` en su raíz.
 
@@ -216,13 +259,34 @@ El dashboard publicado es:
 Después de cada cambio en el sitio, actualiza la rama de despliegue desde la raíz del repositorio:
 
 ```bash
-git subtree split --prefix=paginaCristianoRonaldo --branch gh-pages
-git push origin gh-pages
+git subtree push --prefix=paginaCristianoRonaldo origin gh-pages
 ```
 
 Si GitHub Pages tarda en actualizarse, espera unos minutos y recarga la página con `Cmd + Shift + R` en macOS o `Ctrl + Shift + R` en Windows/Linux.
 
-## 12. Recomendaciones para estudiantes
+## 13. Qué hicimos paso a paso
+
+Este fue el recorrido completo del ejercicio, desde el trabajo local hasta la publicación:
+
+1. **Preparamos el entorno local.** Confirmamos macOS, Node.js, npm, Git y Visual Studio Code.
+2. **Instalamos los agentes.** Dejamos Claude Code para desarrollar y OpenCode para auditar.
+3. **Creamos la carpeta del proyecto.** El desarrollo se realizó dentro de `paginaCristianoRonaldo`.
+4. **Construimos la página estática.** Creamos `index.html`, `styles.css` y `script.js`, sin framework ni backend.
+5. **Añadimos contenido visual.** Incorporamos cuatro fotografías de Cristiano Ronaldo desde Wikimedia Commons, con textos alternativos.
+6. **Probamos la primera versión.** Levantamos un servidor local con `python3 -m http.server 8000` y revisamos escritorio y móvil.
+7. **Auditamos el código.** OpenCode revisó accesibilidad WCAG 2.2 AA, UX y responsive, y generó `AUDITORIA.md`.
+8. **Aplicamos las correcciones.** Claude Code mejoró contraste, foco, navegación móvil, tabs accesibles, `prefers-reduced-motion` y protección contra overflow.
+9. **Creamos observabilidad.** Instrumentamos errores, promesas rechazadas, recursos, navegación, clicks, visibilidad, viewport, conexión y APIs.
+10. **Creamos el dashboard.** Añadimos `observabilidad.html`, `observabilidad.css` y `observabilidad.js`, con actualización, limpieza, evento de demostración y exportación JSON.
+11. **Ejecutamos pruebas.** Validamos sintaxis con `node --check`, diagnósticos de VS Code, interacción de tabs, menú móvil, persistencia local y ausencia de overflow.
+12. **Documentamos los resultados.** Generamos `resultados-pruebas-observabilidad.xlsx` con resumen, casos de prueba y mecanismos observados.
+13. **Inicializamos Git.** Creamos el repositorio local, añadimos `.gitignore`, configuramos `origin` y guardamos el primer commit.
+14. **Subimos el código a GitHub.** Publicamos la rama `main` en `https://github.com/marcosbenjamin44/ejemplo1`.
+15. **Preparamos GitHub Pages.** Generamos la rama `gh-pages` con el contenido del sitio en su raíz.
+16. **Activamos el despliegue.** Configuramos GitHub Pages para servir `gh-pages` desde `/ (root)`.
+17. **Añadimos esta guía.** Documentamos el proceso completo y publicamos el README en `main`.
+
+## 14. Recomendaciones para estudiantes
 
 - Usa HTML semántico antes de añadir `div` innecesarios.
 - Escribe textos alternativos descriptivos para las imágenes.
@@ -233,6 +297,6 @@ Si GitHub Pages tarda en actualizarse, espera unos minutos y recarga la página 
 - Haz commits pequeños y con mensajes descriptivos.
 - Usa la auditoría para corregir problemas, no solo para documentarlos.
 
-## Licencia y contenido
+## 15. Licencia y contenido
 
 Este es un ejercicio educativo. Las imágenes utilizadas proceden de Wikimedia Commons y mantienen sus condiciones de uso y atribución correspondientes. El sitio no es oficial ni está afiliado a Cristiano Ronaldo.

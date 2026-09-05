@@ -57,6 +57,7 @@ ejemplo1/
     ├── observabilidad.css
     ├── observabilidad.js
     ├── AUDITORIA.md
+    ├── AUDITORIA-MESSI.md
     └── resultados-pruebas-observabilidad.xlsx
 ```
 
@@ -95,6 +96,7 @@ flowchart TD
 | `messi.html` | Página de Lionel Messi incorporada en la versión 2. |
 | `messi.css` | Diseño responsive y accesible de la página de Messi. |
 | `messi.js` | Interacciones de la línea de tiempo de Messi. |
+| `AUDITORIA-MESSI.md` | Auditoría específica de OpenCode para la versión 2 de Messi. |
 | `styles.css` | Diseño visual, responsive, contraste y estados de foco. |
 | `script.js` | Interacción de la línea de tiempo y observabilidad del sitio. |
 | `observabilidad.html` | Dashboard para consultar las métricas del navegador. |
@@ -195,6 +197,8 @@ Audita index.html, styles.css y script.js según WCAG 2.2 AA, UX y adaptabilidad
 
 El resultado actual está en [paginaCristianoRonaldo/AUDITORIA.md](paginaCristianoRonaldo/AUDITORIA.md).
 
+La auditoría específica de la página de Messi está en [paginaCristianoRonaldo/AUDITORIA-MESSI.md](paginaCristianoRonaldo/AUDITORIA-MESSI.md).
+
 ## 9. Observabilidad
 
 El sitio registra datos únicamente en el navegador y no los envía a un servidor. La instrumentación se encuentra en `script.js` y expone:
@@ -288,18 +292,20 @@ Este fue el recorrido completo del ejercicio, desde el trabajo local hasta la pu
 6. **Probamos la primera versión.** Levantamos un servidor local con `python3 -m http.server 8000` y revisamos escritorio y móvil.
 7. **Auditamos el código.** OpenCode revisó accesibilidad WCAG 2.2 AA, UX y responsive, y generó `AUDITORIA.md`.
 8. **Aplicamos las correcciones.** Claude Code mejoró contraste, foco, navegación móvil, tabs accesibles, `prefers-reduced-motion` y protección contra overflow.
-9. **Creamos observabilidad.** Instrumentamos errores, promesas rechazadas, recursos, navegación, clicks, visibilidad, viewport, conexión y APIs.
-10. **Creamos el dashboard.** Añadimos `observabilidad.html`, `observabilidad.css` y `observabilidad.js`, con actualización, limpieza, evento de demostración y exportación JSON.
-11. **Ejecutamos pruebas.** Validamos sintaxis con `node --check`, diagnósticos de VS Code, interacción de tabs, menú móvil, persistencia local y ausencia de overflow.
-12. **Documentamos los resultados.** Generamos `resultados-pruebas-observabilidad.xlsx` con resumen, casos de prueba y mecanismos observados.
-13. **Inicializamos Git.** Creamos el repositorio local, añadimos `.gitignore`, configuramos `origin` y guardamos el primer commit.
-14. **Subimos el código a GitHub.** Publicamos la rama `main` en `https://github.com/marcosbenjamin44/ejemplo1`.
-15. **Preparamos GitHub Pages.** Generamos la rama `gh-pages` con el contenido del sitio en su raíz.
-16. **Activamos el despliegue.** Configuramos GitHub Pages para servir `gh-pages` desde `/ (root)`.
-17. **Añadimos esta guía.** Documentamos el proceso completo y publicamos el README en `main`.
-18. **Creamos la versión 2.** Añadimos `messi.html`, `messi.css` y `messi.js` con trayectoria, estadísticas, galería e imágenes de Lionel Messi.
-19. **Integramos la navegación.** Añadimos enlaces a Messi desde CR7 y desde el dashboard de observabilidad.
-20. **Versionamos el cambio.** Guardamos la ampliación como un nuevo commit y la identificamos con la etiqueta Git `v2.0.0`.
+9. **Auditamos la versión 2.** OpenCode revisó la página de Messi antes de publicar y detectó contraste, foco, targets táctiles y overflow móvil.
+10. **Corregimos la auditoría v2.** Claude Code ajustó contraste, foco, objetivos táctiles, ARIA y overflow; el resultado quedó en `AUDITORIA-MESSI.md`.
+11. **Creamos observabilidad.** Instrumentamos errores, promesas rechazadas, recursos, navegación, clicks, visibilidad, viewport, conexión y APIs.
+12. **Creamos el dashboard.** Añadimos `observabilidad.html`, `observabilidad.css` y `observabilidad.js`, con actualización, limpieza, evento de demostración y exportación JSON.
+13. **Ejecutamos pruebas.** Validamos sintaxis con `node --check`, diagnósticos de VS Code, interacción de tabs, menú móvil, persistencia local y ausencia de overflow.
+14. **Documentamos los resultados.** Generamos `resultados-pruebas-observabilidad.xlsx` con resumen, casos de prueba y mecanismos observados.
+15. **Inicializamos Git.** Creamos el repositorio local, añadimos `.gitignore`, configuramos `origin` y guardamos el primer commit.
+16. **Subimos el código a GitHub.** Publicamos la rama `main` en `https://github.com/marcosbenjamin44/ejemplo1`.
+17. **Preparamos GitHub Pages.** Generamos la rama `gh-pages` con el contenido del sitio en su raíz.
+18. **Activamos el despliegue.** Configuramos GitHub Pages para servir `gh-pages` desde `/ (root)`.
+19. **Añadimos esta guía.** Documentamos el proceso completo y publicamos el README en `main`.
+20. **Creamos la versión 2.** Añadimos `messi.html`, `messi.css` y `messi.js` con trayectoria, estadísticas, galería e imágenes de Lionel Messi.
+21. **Integramos la navegación.** Añadimos enlaces a Messi desde CR7 y desde el dashboard de observabilidad.
+22. **Versionamos el cambio.** Guardamos la ampliación como un nuevo commit y la identificamos con la etiqueta Git `v2.0.0`.
 
 ### Versionamiento del proyecto
 

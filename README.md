@@ -1,10 +1,11 @@
-# Proyecto CR7: página web estática y observabilidad
+# Proyecto CR7 + Messi: página web estática y observabilidad (v2)
 
-Este repositorio contiene un ejercicio completo de desarrollo web estático sobre Cristiano Ronaldo. Incluye una página responsive, una auditoría de accesibilidad, un dashboard de observabilidad en el navegador, pruebas funcionales y publicación con GitHub Pages.
+Este repositorio contiene la **versión 2** de un ejercicio completo de desarrollo web estático sobre Cristiano Ronaldo y Lionel Messi. Incluye dos páginas responsive, una auditoría de accesibilidad, un dashboard de observabilidad en el navegador, pruebas funcionales, versionamiento con Git y publicación con GitHub Pages.
 
 ## Abrir el proyecto
 
 - **Página publicada:** [Abrir página CR7](https://marcosbenjamin44.github.io/ejemplo1/)
+- **Página publicada de Messi:** [Abrir página Messi](https://marcosbenjamin44.github.io/ejemplo1/messi.html)
 - **Dashboard de observabilidad:** [Abrir dashboard](https://marcosbenjamin44.github.io/ejemplo1/observabilidad.html)
 - **Repositorio:** [github.com/marcosbenjamin44/ejemplo1](https://github.com/marcosbenjamin44/ejemplo1)
 
@@ -49,6 +50,9 @@ ejemplo1/
     ├── index.html
     ├── styles.css
     ├── script.js
+    ├── messi.html
+    ├── messi.css
+    ├── messi.js
     ├── observabilidad.html
     ├── observabilidad.css
     ├── observabilidad.js
@@ -88,6 +92,9 @@ flowchart TD
 | Componente | Responsabilidad |
 |---|---|
 | `index.html` | Página principal sobre Cristiano Ronaldo. |
+| `messi.html` | Página de Lionel Messi incorporada en la versión 2. |
+| `messi.css` | Diseño responsive y accesible de la página de Messi. |
+| `messi.js` | Interacciones de la línea de tiempo de Messi. |
 | `styles.css` | Diseño visual, responsive, contraste y estados de foco. |
 | `script.js` | Interacción de la línea de tiempo y observabilidad del sitio. |
 | `observabilidad.html` | Dashboard para consultar las métricas del navegador. |
@@ -111,6 +118,7 @@ python3 -m http.server 8000
 Abre estas direcciones:
 
 - [Página principal local](http://localhost:8000/)
+- [Página Messi local](http://localhost:8000/messi.html)
 - [Dashboard local](http://localhost:8000/observabilidad.html)
 
 Para detener el servidor, pulsa `Ctrl + C` en la terminal.
@@ -256,6 +264,10 @@ El dashboard publicado es:
 
 **[https://marcosbenjamin44.github.io/ejemplo1/observabilidad.html](https://marcosbenjamin44.github.io/ejemplo1/observabilidad.html)**
 
+La página de Messi queda publicada en:
+
+**[https://marcosbenjamin44.github.io/ejemplo1/messi.html](https://marcosbenjamin44.github.io/ejemplo1/messi.html)**
+
 Después de cada cambio en el sitio, actualiza la rama de despliegue desde la raíz del repositorio:
 
 ```bash
@@ -285,6 +297,30 @@ Este fue el recorrido completo del ejercicio, desde el trabajo local hasta la pu
 15. **Preparamos GitHub Pages.** Generamos la rama `gh-pages` con el contenido del sitio en su raíz.
 16. **Activamos el despliegue.** Configuramos GitHub Pages para servir `gh-pages` desde `/ (root)`.
 17. **Añadimos esta guía.** Documentamos el proceso completo y publicamos el README en `main`.
+18. **Creamos la versión 2.** Añadimos `messi.html`, `messi.css` y `messi.js` con trayectoria, estadísticas, galería e imágenes de Lionel Messi.
+19. **Integramos la navegación.** Añadimos enlaces a Messi desde CR7 y desde el dashboard de observabilidad.
+20. **Versionamos el cambio.** Guardamos la ampliación como un nuevo commit y la identificamos con la etiqueta Git `v2.0.0`.
+
+### Versionamiento del proyecto
+
+La rama `main` contiene el código fuente y la rama `gh-pages` contiene la versión desplegable. Para consultar versiones:
+
+```bash
+git log --oneline --decorate
+git tag --list
+```
+
+Para crear una nueva versión después de realizar cambios:
+
+```bash
+git add .
+git commit -m "feat: add next project version"
+git tag -a v2.0.0 -m "Version 2: add Messi page"
+git push origin main --tags
+git subtree push --prefix=paginaCristianoRonaldo origin gh-pages
+```
+
+> Si la etiqueta `v2.0.0` ya existe, usa la siguiente versión semántica, por ejemplo `v2.1.0` para nuevas funcionalidades o `v2.0.1` para correcciones.
 
 ## 14. Recomendaciones para estudiantes
 
